@@ -1,0 +1,144 @@
+:root {
+    --bg: #0d0d0d;
+    --fg: #00ff00;
+    --accent: #ff0000;
+    --panel: #111;
+    --violet: #8e44ad;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: "Courier New", Consolas, monospace;
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+
+.wrap {
+    width: 100%;
+    max-width: 760px;
+}
+
+h1 {
+    margin: 0 0 6px;
+    text-align: center;
+}
+
+.sub {
+    opacity: .85;
+    text-align: center;
+    margin-bottom: 22px;
+}
+
+.terminal {
+    border: 2px solid var(--accent);
+    border-radius: 10px;
+    background: linear-gradient(180deg, #0d0d0d, #0a0a0a);
+    box-shadow: 0 0 24px rgba(255, 0, 0, .25), inset 0 0 18px rgba(255, 0, 0, .08);
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.lamp {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: radial-gradient(1200px 300px at 50% -10%, rgba(255, 0, 0, .07), transparent 60%);
+}
+
+.line {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    margin-top: 12px;
+}
+
+.prompt {
+    color: var(--violet);
+}
+
+
+.terminal .line input {
+    flex: 1;
+    background: transparent;
+    color: var(--fg);
+    font-family: 'Courier New', monospace;
+    font-size: 1.2em;
+    border: none; 
+    outline: none; 
+    padding: 10px;
+    text-shadow: 0 0 5px var(--fg), 0 0 10px var(--fg); 
+    caret-color: var(--fg); 
+}
+
+.terminal .line input::placeholder {
+    color: rgba(0, 255, 0, 0.5);
+}
+
+
+button {
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+button:disabled {
+    opacity: .5;
+    cursor: not-allowed;
+}
+
+.panel {
+    border: 2px solid var(--accent);
+    border-radius: 10px;
+    padding: 16px;
+    background: var(--panel);
+    margin-top: 18px;
+    box-shadow: 0 0 20px var(--accent);
+}
+
+.muted {
+    opacity: .8;
+}
+
+.msg-ok {
+    color: #3ddc84;
+}
+
+.msg-err {
+    color: #ff5c5c;
+}
+
+.hr {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--accent), transparent);
+    margin: 16px 0;
+}
+
+code {
+    color: #fff;
+}
+
+.hint {
+    color: #ff5555;
+}
+
+.highlight-text {
+    color: #FF5733; /* Laranja */
+    font-size: 30px; /* Tamanho grande */
+    font-weight: bold; /* Negrito */
+    text-decoration: underline; /* Sublinhado */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Sombra */
+}
